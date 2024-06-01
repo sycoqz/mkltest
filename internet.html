@@ -1,0 +1,66 @@
+<section class="hero">
+    <?php $heroImg = $this->getHeroImg();?>
+    <div class="hero__image" style="background-image: url('<?=$this->img($heroImg)?>')">
+        <div class="hero__wrapper wrapper">
+            <div class="hero__block">
+                <div class="hero__block-cover">
+                    <h1 class="hero__block-caption">Интернет</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="description">
+    <div class="description__wrapper wrapper">
+        <div class="description__text-block">
+            <p class="description__text">Мы предоставляем стабильный и надежный доступ к высокоскоростному интернету. Существующие решения реализованы как в мобильном, так и стационарном исполнении, Маршрутизаторы отлично справятся с организацией устойчивого Wi-Fi соединения на катере, машине и любом другом средстве передвижения, а также в жилом секторе, частной собственности, область применения может быть безгранична.</p>
+            <p class="description__text">Маршрутизаторы объединяют потоки мобильного интернета от нескольких провайдеров в единый бесперебойный канал доступа, чтобы вы всегда оставались онлайн.</p>
+            <p class="description__text">
+                Преимущества использования маршрутизаторов:
+                <br>
+                1. Качество сигнала (бесперебойность)
+                <br>
+                2. Простота использования (user friendly)
+                <br>
+                3. Надежность
+                <br>
+                4. Безопасность
+            </p>
+        </div>
+    </div>
+</section>
+<?php if (!empty($goods)):?>
+<section class="goods">
+    <div class="goods__wrapper wrapper">
+        <?php foreach ($goods as $item):?>
+            <article class="goods-card">
+                <div class="goods-card__image"><img src="<?=$this->img($item['img'])?>" alt="<?=$item['name']?>" class="goods__image" loading="lazy" width="400"></div>
+                <div class="goods-card__information">
+                    <p class="goods-card__caption"><?=$item['caption']?></p>
+                    <div class="goods-card__description"><?=$item['short_content']?></div>
+                    <div class="goods-card__button-wrapper">
+                        <button class="goods-card__button goods-card__button-info button" data-good="<?=$item['id']?>">Подробнее</button>
+                        <button class="goods-card__button goods-card__button-purchase button">Получить персональное предложение</button>
+                    </div>
+                </div>
+            </article>
+        <?php endforeach;?>
+    </div>
+</section>
+<?php endif;?>
+<section class="diagnostics">
+    <div class="diagnostics__wrapper wrapper">
+        <p>При необходимости доступна услуга диагностики места. Диагностика включает в себя обследование ландшафта и радио планирование. В случае получения отрицательных результатов оценки выезд специалиста не оплачивается</p>
+    </div>
+</section>
+<section class="product-package">
+    <div class="product-package__wrapper wrapper">
+        <div class="product-package__caption">Форма фактор «сумка» и «кейс»</div>
+        <div class="product-package__gallery">
+            <div><img class="product-package__image" src="/templates/default/assets/img/ff-bag.jpg" alt="bag"></div>
+            <div><img class="product-package__image" src="/templates/default/assets/img/ff-case.jpg" alt="case"></div>
+            <div><img class="product-package__image" src="/templates/default/assets/img/Case.png" alt="case"></div>
+        </div>
+        <button class="product-package__button button button--default">Получить персональное предложение</button>
+    </div>
+</section>

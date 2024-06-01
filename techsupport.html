@@ -1,0 +1,44 @@
+<section class="hero">
+    <?php $heroImg = $this->getHeroImg();?>
+    <div class="hero__image" style="background-image: url('<?=$this->img($heroImg)?>')">
+        <div class="hero__wrapper wrapper">
+            <div class="hero__block">
+                <div class="hero__block-cover">
+                    <h1 class="hero__block-caption">Тех.поддержка</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="description">
+    <div class="description__wrapper wrapper">
+        <div class="description__text-block">
+            <div class="description__text">Если у вас возник вопрос, позвоните нам по телефону: 8968-555-11-01 (9:00-18:00 мск по будням) напишите нам info@mkl.group или оставьте заявку ниже и мы вам перезвоним.</div>
+        </div>
+    </div>
+</section>
+<section class="feedback">
+    <div class="feedback__wrapper wrapper">
+        <div class="feedback__cover">
+            <div class="feedback__caption">
+                <p class="feedback__caption-main">Напишите нам</p>
+                <p class="feedback__caption-text">Если хотите узнать больше о наших услугах</p>
+            </div>
+            <form action="" class="feedback__form">
+                <div class="feedback__form-top">
+                    <div class="feedback__form-data">
+                        <label for="feedback__name" class="feedback__form-name"><input id="feedback__name" type="text" class="feedback__form-input input-text" placeholder="Имя" required aria-required="true"></label>
+                        <label for="feedback__phone" class="feedback__form-phone"><input type="text" id="feedback__phone" class="feedback__form-input input-text" placeholder="Телефон" required aria-required="true"></label>
+                    </div>
+                    <div class="feedback__form-textarea">
+                        <label for="feedback__text" class="feedback__form-text"><textarea name="feedback__text" id="feedback__text" cols="30" rows="10" class="feedback__form-textarea input-text" placeholder="Ваше сообщение" required aria-required="true"></textarea></label>
+                    </div>
+                </div>
+                <div class="feedback__form-bottom">
+                    <button class="feedback__form-button button submit__button" type="submit" aria-label="Отправить форму обратной связи">Отправить</button>
+                    <p class="feedback__privacy">Нажимая на кнопку, я соглашаюсь на обработку персональных данных</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

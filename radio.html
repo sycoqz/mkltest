@@ -1,0 +1,38 @@
+<section class="hero">
+    <?php $heroImg = $this->getHeroImg();?>
+    <div class="hero__image" style="background-image: url('<?=$this->img($heroImg)?>')">
+        <div class="hero__wrapper wrapper">
+            <div class="hero__block">
+                <div class="hero__block-cover">
+                    <h1 class="hero__block-caption">Радиосвязь</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="description">
+    <div class="description__wrapper wrapper">
+        <div class="description__text-block">
+            <p class="description__text">Радиосвязь с различными исполнениями, узкополосная связь, гибридные рации с функциями узкополосной связи, РТТ без ограничений территории, возможность использования радиосвязи для общения по видео. Создание отдельных групп пользователей, операторское приложение с возможностью отслеживания каждой рации. Полное шифрование передаваемой информации. Системы профессиональной мобильной радиосвязи: от аналоговых до цифровых, от стандартных до магистральных, от портативных и мобильных до системного оборудования.</p>
+        </div>
+    </div>
+</section>
+<?php if (!empty($goods)):?>
+<section class="goods">
+    <div class="goods__wrapper wrapper">
+        <?php foreach ($goods as $item):?>
+            <article class="goods-card">
+                <div class="goods-card__image"><img src="<?=$this->img($item['img'])?>" alt="<?=$item['name']?>" class="goods__image" loading="lazy" height="200"></div>
+                <div class="goods-card__information">
+                    <p class="goods-card__caption"><?=$item['caption']?></p>
+                    <div class="goods-card__description"><?=$item['short_content']?></div>
+                    <div class="goods-card__button-wrapper">
+                        <button class="goods-card__button goods-card__button-info button" data-good="<?=$item['id']?>">Подробнее</button>
+                        <button class="goods-card__button goods-card__button-purchase button">Получить персональное предложение</button>
+                    </div>
+                </div>
+            </article>
+        <?php endforeach;?>
+    </div>
+</section>
+<?php endif;?>
