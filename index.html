@@ -128,14 +128,18 @@
             <div class="social-networks__wrapper wrapper">
                 <h3 class="social-networks__caption">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h3>
                 <div class="social-networks__icons">
-                    <?php if (!empty($this->social_networks)):?>
-                    <?php foreach ($this->social_networks as $item):?>
                     <div class="social-networks__icons-card">
-                        <a href="<?=$this->alias($item['external_alias'])?>" class="social-networks-link"><img height="64px" width="64px" src="<?=$this->img($item['img'])?>" alt="<?=$item['name']?>" class="social-networks-image" loading="lazy"></a>
-                        <p class="social-networks-text"><?=$item['name']?></p>
+                        <a href="#" class="social-networks-link"><img height="64px" width="64px" src="/userfiles/social_networks/tg-black.svg" alt="tg" class="social-networks-image" loading="lazy"></a>
+                        <p class="social-networks-text">Telegram</p>
                     </div>
-                    <?php endforeach;?>
-                    <?php endif;?>
+                    <div class="social-networks__icons-card">
+                        <a href="#" class="social-networks-link"><img height="64px" width="64px" src="/userfiles/social_networks/wa-black.svg" alt="wa" class="social-networks-image" loading="lazy"></a>
+                        <p class="social-networks-text">Whatsapp</p>
+                    </div>
+                    <div class="social-networks__icons-card">
+                        <a href="#" class="social-networks-link"><img height="64px" width="64px" src="/userfiles/social_networks/vk-black.svg" alt="vk" class="social-networks-image" loading="lazy"></a>
+                        <p class="social-networks-text">ВКонтакте</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -149,11 +153,11 @@
                     <form action="" class="feedback__form">
                         <div class="feedback__form-top">
                             <div class="feedback__form-data">
-                                <label for="feedback__name" class="feedback__form-name"><input id="feedback__name" type="text" class="feedback__form-input input-text" placeholder="Имя" required aria-required="true"></label>
-                                <label for="feedback__phone" class="feedback__form-phone"><input type="text" id="feedback__phone" class="feedback__form-input input-text" placeholder="Телефон" required aria-required="true"></label>
+                                <label for="feedback__name_1" class="feedback__form-name"><input id="feedback__name_1" type="text" class="feedback__form-input input-text" placeholder="Имя" required aria-required="true"></label>
+                                <label for="feedback__phone_1" class="feedback__form-phone"><input type="text" id="feedback__phone_1" class="feedback__form-input input-text" placeholder="Телефон" required aria-required="true"></label>
                             </div>
                             <div class="feedback__form-textarea">
-                                <label for="feedback__text" class="feedback__form-text"><textarea name="feedback__text" id="feedback__text" cols="30" rows="10" class="feedback__form-textarea input-text" placeholder="Ваше сообщение" required aria-required="true"></textarea></label>
+                                <label for="feedback__text_1" class="feedback__form-text"><textarea name="feedback__text" id="feedback__text_1" cols="30" rows="10" class="feedback__form-textarea input-text" placeholder="Ваше сообщение" required aria-required="true"></textarea></label>
                             </div>
                         </div>
                         <div class="feedback__form-bottom">
