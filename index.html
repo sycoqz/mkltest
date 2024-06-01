@@ -203,23 +203,25 @@
                 <div class="footer__copyright">
                     <p>© MKL Telecom. Все права защищены.</p>
                 </div>
-                <?php if (!empty($this->social_networks)):?>
                 <div class="footer__social-networks">
-                    <?php foreach ($this->social_networks as $item):?>
-                    <a class="footer__social-networks-link" href="<?=$this->alias($item['external_alias'])?>" rel="noopener" target="_blank">
-                        <img class="social-networks__image" src="<?=$this->img($item['img'])?>" width="32px" height="32px" alt="<?=$item['name']?>" loading="lazy">
+                    <a class="footer__social-networks-link" href="#" rel="noopener" target="_blank">
+                        <img class="social-networks__image" src="userfiles/social_networks/tg-black.svg" width="32px" height="32px" alt="tg" loading="lazy">
                     </a>
-                    <?php endforeach;?>
+                    <a class="footer__social-networks-link" href="#" rel="noopener" target="_blank">
+                        <img class="social-networks__image" src="userfiles/social_networks/wa-black.svg" width="32px" height="32px" alt="wa" loading="lazy">
+                    </a>
+                    <a class="footer__social-networks-link" href="#" rel="noopener" target="_blank">
+                        <img class="social-networks__image" src="userfiles/social_networks/vk-black.svg" width="32px" height="32px" alt="vk" loading="lazy">
+                    </a>
                 </div>
-                <?php endif;?>
             </div>
             <div class="footer__menu">
                 <ul class="footer__menu-list">
-                    <?php foreach ($this->menu['pages'] as $page):?>
-                    <?php if ((int)$page['visibility'] === 1):?>
-                    <li class="footer__menu-item"><a href="<?=$this->alias($page['alias'])?>" class="footer__menu-link"><?=$page['name']?></a></li>
-                    <?php endif;?>
-                    <?php endforeach;?>
+                    <li class="footer__menu-item"><a href="/mkltest/" class="footer__menu-link">Главная</a></li>
+                    <li class="footer__menu-item"><a href="/internet" class="footer__menu-link">Интернет</a></li>
+                    <li class="footer__menu-item"><a href="/radio" class="footer__menu-link">Радиосвязь</a></li>
+                    <li class="footer__menu-item"><a href="/cctv" class="footer__menu-link">Видеонаблюдение</a></li>
+                    <li class="footer__menu-item"><a href="/techsupport" class="footer__menu-link">Тех.поддержка</a></li>
                 </ul>
             </div>
         </div>
