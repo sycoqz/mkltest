@@ -45,7 +45,7 @@
                             <h1 class="hero__block-caption">MKL Telecom</h1>
                             <p class="hero__block-text">text</p>
                         </div>
-                        <a href="<?=$this->alias('about')?>" class="hero__block-about-company">
+                        <a href="/about" class="hero__block-about-company">
                             <button class="hero__block-button button">О КОМПАНИИ MKL TELECOM</button>
                         </a>
                     </div>
@@ -56,17 +56,15 @@
             <div class="company-products__wrapper wrapper">
                 <h2 class="company-products__caption">Наши решения</h2>
                 <div class="company-products__cards-wrapper">
-                    <?php foreach ($company_products as $item):?>
                     <article class="company-products__card">
                         <div class="company-products__card-cover">
-                            <a href="<?=$this->alias($item['alias'])?>" class="company-products__card-caption"><?=$item['name']?></a>
-                            <a href="<?=$this->alias($item['alias'])?>" class="company-products__card-image"><img src="<?=$this->img($item['img'])?>" alt="<?=$item['name']?>" class="card-image" loading="lazy"></a>
-                            <a href="<?=$this->alias($item['alias'])?>" class="company-products__card-link">
+                            <a href="/internet" class="company-products__card-caption"><?=$item['name']?></a>
+                            <a href="/internet" class="company-products__card-image"><img src="userfiles/company_products/banners_500x500_internet.jpg" alt="internet" class="card-image" loading="lazy"></a>
+                            <a href="/internet" class="company-products__card-link">
                                 <button class="company-products__card-button button button--transparent">Подробнее</button>
                             </a>
                         </div>
                     </article>
-                    <?php endforeach;?>
                 </div>
                 <div class="company-products__text">
                     <p>Мы расширяем границы, соединяя людей и инновации, делая связь стабильной, а вашу жизнь - более безопасной, благодаря всему спектру оказываемых нами услуг. MKL Telecom - Ваш надежный партнер в области технологий.</p>
