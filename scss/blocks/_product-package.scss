@@ -30,8 +30,12 @@
   &__image {
     background-position: center;
     background-repeat: no-repeat;
-    height: 276px;
-    width: 276px;
+    height: 265px;
+    width: 265px;
     border-radius: var(--border-radius-large);
+    @include tablet {
+      height: 200px;
+      width: 200px;
+    }
   }
 }

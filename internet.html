@@ -225,11 +225,11 @@
     </form>
     <section class="mobile-overlay__body">
         <ul class="mobile-overlay__list">
-            <?php foreach ($this->menu['pages'] as $page):?>
-            <?php if ((int)$page['visibility'] === 1):?>
-            <li class="mobile-overlay__item"><a href="<?=$this->alias($page['alias'])?>" class="mobile-overlay__link"><?=$page['name']?></a></li>
-            <?php endif;?>
-            <?php endforeach;?>
+            <li class="mobile-overlay__item"><a href="/mkltest/" class="mobile-overlay__link">Главная</a></li>
+            <li class="mobile-overlay__item"><a href="/mkltest/internet" class="mobile-overlay__link">Интернет</a></li>
+            <li class="mobile-overlay__item"><a href="/mkltest/radio" class="mobile-overlay__link">Радиосвязь</a></li>
+            <li class="mobile-overlay__item"><a href="/mkltest/cctv" class="mobile-overlay__link">Видеонаблюдение</a></li>
+            <li class="mobile-overlay__item"><a href="/mkltest/techsupport" class="mobile-overlay__link">Тех.поддержка</a></li>
         </ul>
     </section>
 </dialog>
