@@ -101,16 +101,14 @@
                 </div>
                 <div class="sales-hits__slider swiper">
                     <div class="sales-hits__slider-wrapper slider__cards-wrapper swiper-wrapper">
-                        <?php foreach ($sliderGoods as $item):?>
-                        <article class='slider__card swiper-slide' tabindex="-1" data-item="<?=$item['parent_id']?>">
+                        <article class='slider__card swiper-slide' tabindex="-1" data-item="1">
                             <div class="slider__card-cover">
-                                <div class="slider__card-image"><img height="128px" src="<?=$this->img($item['img'])?>" alt="<?=$item['name']?>" loading="lazy"></div>
-                                <p class="slider__card-caption"><?=$item['caption']?></p>
-                                <p class="slider__card-description"><?=$item['short_content']?></p>
-                                <button class="slider__card-button goods-card__button-info button" data-good="<?=$item['id']?>">Подробнее</button>
+                                <div class="slider__card-image"><img height="128px" src="/userfiles/goods/incarnetvi8-ur.png" alt="vi8rs" loading="lazy"></div>
+                                <p class="slider__card-caption">Маршрутизатор мультиоператорный Vi8RS</p>
+                                <p class="slider__card-description">Маршрутизатор обеспечивает организацию и бесперебойное поддержание всех 3G/LTE каналов передачи данных в зависимости от задействованных модемов и 8 (восьми) SIM-карт при наличии покрытия сотовой сети.</p>
+                                <button class="slider__card-button goods-card__button-info button" data-good="1">Подробнее</button>
                             </div>
                         </article>
-                        <?php endforeach;?>
                     </div>
                     <div class="slider__pagination swiper-pagination"></div>
                     <div class="slider__button slider__button-prev" tabindex="0">
