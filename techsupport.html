@@ -1,44 +1,180 @@
-<section class="hero">
-    <?php $heroImg = $this->getHeroImg();?>
-    <div class="hero__image" style="background-image: url('<?=$this->img($heroImg)?>')">
-        <div class="hero__wrapper wrapper">
-            <div class="hero__block">
-                <div class="hero__block-cover">
-                    <h1 class="hero__block-caption">Тех.поддержка</h1>
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, shrink-to-fit=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MKL TEST</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="<?=$this->set['description']?>">
+    <meta name="keywords" content="<?=$this->set['keywords']?>">
+    <meta name="google" content="notranslate">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?=SITE_URL?>">
+    <meta property="og:title" content="<?=$this->set['name']?>">
+    <meta property="og:description" content="<?=$this->set['description']?>">
+    <meta property="og:image" content="<?=SITE_URL . $this->alias($this->set['img'])?>">
+</head>
+<body>
+<header class="header">
+    <div class="header__wrapper wrapper">
+        <a href="/mkltest/" class="header__logo logo">
+            <img src="img/logo.svg" width="100" height="100" alt="logo" class="logo_image" loading="lazy">
+        </a>
+        <button class="header__button modal__open-btn button hidden-mobile" type="button">Консультация</button>
+        <nav class="header__menu hidden-mobile">
+            <ul class="header__menu-list">
+                <li class="header__menu-item"><a href="/mkltest/" class="header__menu-link">Главная</a></li>
+                <li class="header__menu-item"><a href="/mkltest/internet" class="header__menu-link">Интернет</a></li>
+                <li class="header__menu-item"><a href="/mkltest/radio" class="header__menu-link">Радиосвязь</a></li>
+                <li class="header__menu-item"><a href="/mkltest/cctv" class="header__menu-link">Видеонаблюдение</a></li>
+                <li class="header__menu-item"><a href="/mkltest/techsupport" class="header__menu-link">Тех.поддержка</a></li>
+            </ul>
+        </nav>
+        <button class="header__burger-button modal__open-btn burger-button visible-mobile" type="button" aria-label="Открыть навигационное меню" onclick="mobileOverlay.showModal()">
+            <span class="visually-hidden">Открыть навигационное меню</span>
+        </button>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <?php $heroImg = $this->getHeroImg();?>
+        <div class="hero__image" style="background-image: url('<?=$this->img($heroImg)?>')">
+            <div class="hero__wrapper wrapper">
+                <div class="hero__block">
+                    <div class="hero__block-cover">
+                        <h1 class="hero__block-caption">Тех.поддержка</h1>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="description">
-    <div class="description__wrapper wrapper">
-        <div class="description__text-block">
-            <div class="description__text">Если у вас возник вопрос, позвоните нам по телефону: 8968-555-11-01 (9:00-18:00 мск по будням) напишите нам info@mkl.group или оставьте заявку ниже и мы вам перезвоним.</div>
+    </section>
+    <section class="description">
+        <div class="description__wrapper wrapper">
+            <div class="description__text-block">
+                <div class="description__text">Если у вас возник вопрос, позвоните нам по телефону: 8968-555-11-01 (9:00-18:00 мск по будням) напишите нам info@mkl.group или оставьте заявку ниже и мы вам перезвоним.</div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback">
+        <div class="feedback__wrapper wrapper">
+            <div class="feedback__cover">
+                <div class="feedback__caption">
+                    <p class="feedback__caption-main">Напишите нам</p>
+                    <p class="feedback__caption-text">Если хотите узнать больше о наших услугах</p>
+                </div>
+                <form action="" class="feedback__form">
+                    <div class="feedback__form-top">
+                        <div class="feedback__form-data">
+                            <label for="feedback__name" class="feedback__form-name"><input id="feedback__name" type="text" class="feedback__form-input input-text" placeholder="Имя" required aria-required="true"></label>
+                            <label for="feedback__phone" class="feedback__form-phone"><input type="text" id="feedback__phone" class="feedback__form-input input-text" placeholder="Телефон" required aria-required="true"></label>
+                        </div>
+                        <div class="feedback__form-textarea">
+                            <label for="feedback__text" class="feedback__form-text"><textarea name="feedback__text" id="feedback__text" cols="30" rows="10" class="feedback__form-textarea input-text" placeholder="Ваше сообщение" required aria-required="true"></textarea></label>
+                        </div>
+                    </div>
+                    <div class="feedback__form-bottom">
+                        <button class="feedback__form-button button submit__button" type="submit" aria-label="Отправить форму обратной связи">Отправить</button>
+                        <p class="feedback__privacy">Нажимая на кнопку, я соглашаюсь на обработку персональных данных</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer__wrapper wrapper">
+        <div class="footer__contacts">
+            <ul class="footer__contacts-list">
+                <li class="footer__contacts-item"><a href="/mkltest/techsupport">mka@mkl.group</a></li>
+                <li class="footer__contacts-item"><a href="/mkltest/techsupport">+8(968)-555-11-01</a></li>
+                <li class="footer__contacts-item"><a href="/mkltest/techsupport">Новомарьинская ул, 12/12 к1, Москва, Россия, 109652</a></li>
+            </ul>
+            <div class="footer__copyright">
+                <p>© MKL Telecom. Все права защищены.</p>
+            </div>
+            <div class="footer__social-networks">
+                <a class="footer__social-networks-link" href="#" rel="noopener" target="_blank">
+                    <img class="social-networks__image" src="userfiles/social_networks/tg-black.svg" width="32px" height="32px" alt="tg" loading="lazy">
+                </a>
+                <a class="footer__social-networks-link" href="#" rel="noopener" target="_blank">
+                    <img class="social-networks__image" src="userfiles/social_networks/wa-black.svg" width="32px" height="32px" alt="wa" loading="lazy">
+                </a>
+                <a class="footer__social-networks-link" href="#" rel="noopener" target="_blank">
+                    <img class="social-networks__image" src="userfiles/social_networks/vk-black.svg" width="32px" height="32px" alt="vk" loading="lazy">
+                </a>
+            </div>
+        </div>
+        <div class="footer__menu">
+            <ul class="footer__menu-list">
+                <li class="footer__menu-item"><a href="/mkltest/" class="footer__menu-link">Главная</a></li>
+                <li class="footer__menu-item"><a href="/mkltest/internet" class="footer__menu-link">Интернет</a></li>
+                <li class="footer__menu-item"><a href="/mkltest/radio" class="footer__menu-link">Радиосвязь</a></li>
+                <li class="footer__menu-item"><a href="/mkltest/cctv" class="footer__menu-link">Видеонаблюдение</a></li>
+                <li class="footer__menu-item"><a href="/mkltest/techsupport" class="footer__menu-link">Тех.поддержка</a></li>
+            </ul>
         </div>
     </div>
-</section>
-<section class="feedback">
-    <div class="feedback__wrapper wrapper">
-        <div class="feedback__cover">
+</footer>
+<dialog class="feedback-modal modal-window" id="modalConsultation">
+    <form class="feedback-modal__close-btn-wrapper" method="dialog">
+        <button class="feedback-modal__close-btn modal__close-btn cross-btn" type="submit" aria-label="Закрыть окно консультации">
+            <span class="visually-hidden">Закрыть окно консультации</span>
+        </button>
+    </form>
+    <section class="feedback-modal__wrapper">
+        <div class="feedback-modal__cover">
             <div class="feedback__caption">
-                <p class="feedback__caption-main">Напишите нам</p>
-                <p class="feedback__caption-text">Если хотите узнать больше о наших услугах</p>
+                <p class="feedback__caption-main">Заказать консультацию</p>
             </div>
-            <form action="" class="feedback__form">
-                <div class="feedback__form-top">
+            <form action="" class="feedback-modal__form feedback__form">
+                <div class="feedback-modal__form-top feedback__form-top">
                     <div class="feedback__form-data">
                         <label for="feedback__name" class="feedback__form-name"><input id="feedback__name" type="text" class="feedback__form-input input-text" placeholder="Имя" required aria-required="true"></label>
                         <label for="feedback__phone" class="feedback__form-phone"><input type="text" id="feedback__phone" class="feedback__form-input input-text" placeholder="Телефон" required aria-required="true"></label>
                     </div>
                     <div class="feedback__form-textarea">
-                        <label for="feedback__text" class="feedback__form-text"><textarea name="feedback__text" id="feedback__text" cols="30" rows="10" class="feedback__form-textarea input-text" placeholder="Ваше сообщение" required aria-required="true"></textarea></label>
+                        <label for="feedback__text" class="feedback__form-text"><textarea name="feedback__text" id="feedback__text" class="feedback__form-textarea input-text" placeholder="Ваше сообщение" required aria-required="true"></textarea></label>
                     </div>
                 </div>
-                <div class="feedback__form-bottom">
+                <div class="feedback-modal__form-bottom feedback__form-bottom">
                     <button class="feedback__form-button button submit__button" type="submit" aria-label="Отправить форму обратной связи">Отправить</button>
                     <p class="feedback__privacy">Нажимая на кнопку, я соглашаюсь на обработку персональных данных</p>
                 </div>
             </form>
         </div>
-    </div>
-</section>
+    </section>
+</dialog>
+<dialog class="mobile-overlay visible-mobile modal-window" id="mobileOverlay">
+    <form class="mobile-overlay__close-btn-wrapper" method="dialog">
+        <button class="mobile-overlay__close-btn modal__close-btn cross-btn" type="submit" aria-label="Закрыть навигационное меню">
+            <span class="visually-hidden">Закрыть навигационное меню</span>
+        </button>
+    </form>
+    <section class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+            <?php foreach ($this->menu['pages'] as $page):?>
+            <?php if ((int)$page['visibility'] === 1):?>
+            <li class="mobile-overlay__item"><a href="<?=$this->alias($page['alias'])?>" class="mobile-overlay__link"><?=$page['name']?></a></li>
+            <?php endif;?>
+            <?php endforeach;?>
+        </ul>
+    </section>
+</dialog>
+<dialog class="goods-modal" id="goodsModal">
+    <form class="goods-modal__close-btn-wrapper" method="dialog">
+        <button class="goods-modal__close-btn modal__close-btn cross-btn" type="submit" aria-label="Закрыть подробности о товаре">
+            <span class="visually-hidden">Закрыть навигационное меню</span>
+        </button>
+    </form>
+    <section class="goods-modal__wrapper">
+        <div class="goods-modal__description"></div>
+    </section>
+</dialog>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/showMessage.js"></script>
+<script src="js/script.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
