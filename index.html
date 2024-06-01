@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MKL TEST</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <meta name="description" content="<?=$this->set['description']?>">
     <meta name="keywords" content="<?=$this->set['keywords']?>">
     <meta name="google" content="notranslate">
@@ -195,12 +196,12 @@
         <div class="footer__wrapper wrapper">
             <div class="footer__contacts">
                 <ul class="footer__contacts-list">
-                    <li class="footer__contacts-item"><a href="<?=$this->alias('techsupport')?>"><?=$this->set['email']?></a></li>
-                    <li class="footer__contacts-item"><a href="<?=$this->alias('techsupport')?>"><?=$this->set['phone']?></a></li>
-                    <li class="footer__contacts-item"><a href="<?=$this->alias('techsupport')?>"><?=$this->set['address']?></a></li>
+                    <li class="footer__contacts-item"><a href="/techsupport">mka@mkl.group</a></li>
+                    <li class="footer__contacts-item"><a href="/techsupport">+8(968)-555-11-01</a></li>
+                    <li class="footer__contacts-item"><a href="/techsupport">Новомарьинская ул, 12/12 к1, Москва, Россия, 109652</a></li>
                 </ul>
                 <div class="footer__copyright">
-                    <p>&copy <?=$this->set['ooo_content'] ?? 'ООО ' . '«' . $this->set['name'] . '»'?>. Все права защищены.</p>
+                    <p>© MKL Telecom. Все права защищены.</p>
                 </div>
                 <?php if (!empty($this->social_networks)):?>
                 <div class="footer__social-networks">
