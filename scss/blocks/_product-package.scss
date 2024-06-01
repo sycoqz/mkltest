@@ -1,0 +1,37 @@
+.diagnostics {
+  display: flex;
+  background-color: var(--color-grey-1);
+  width: 100%;
+  .diagnostics__wrapper {
+    @include fluid-text(14,20);
+  }
+}
+
+.product-package {
+  display: flex;
+  background-color: var(--color-grey-1);
+  width: 100%;
+  padding: var(--padding-xl) 0;
+  &__wrapper {
+    flex-direction: column;
+    gap: var(--gap-large)
+  }
+  &__gallery {
+    display: flex;
+    gap: 5rem;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  &__caption {
+    text-align: center;
+    @include fluid-text(18,32);
+  }
+  &__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 276px;
+    width: 276px;
+    border-radius: var(--border-radius-large);
+  }
+}

@@ -1,0 +1,41 @@
+.tab-controls {
+
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-grey);
+  border-radius: var(--border-radius-large);
+  padding: var(--padding-xs);
+
+  @include mobile {
+    border-radius: var(--border-radius-medium);
+  }
+
+  &-button {
+
+    @include fluid-text(14,20);
+    font-weight: 500;
+    height: 48px;
+    padding: var(--padding-xs) var(--padding-medium);
+    color: var(--color-dark-80);
+    border: none;
+    background-color: transparent;
+
+    @include mobile {
+      @include fluid-text(12, 20);
+      padding: var(--padding-xs) var(--padding-small);
+      border-radius: var(--border-radius-medium);
+    }
+
+    &--active {
+      color: var(--color-dark);
+      background-color: var(--color-accent-2);
+    }
+
+    @include hover {
+      color: var(--color-dark);
+      background-color: var(--color-accent-2-80);
+    }
+
+  }
+
+}

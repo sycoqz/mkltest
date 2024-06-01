@@ -1,0 +1,163 @@
+.feedback {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--color-grey-1);
+  padding: var(--padding-xl) 0;
+
+  &-modal {
+    border-radius: var(--border-radius-large);
+    border: none;
+    &__cover {
+      @include flex-column;
+      align-items: center;
+      gap: var(--gap-large);
+    }
+    &__wrapper {
+      display: flex;
+      padding: var(--padding-large);
+      background-color: var(--color-light);
+    }
+    &__form {
+      @include flex-column;
+      align-items: center;
+      &-top {
+        @include flex-column;
+      }
+      &-bottom {
+        @include flex-column;
+        align-items: center;
+      }
+    }
+    &__close-btn {
+
+      &-wrapper {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: block;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-large);
+  }
+
+  &__cover {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    gap: var(--gap-large);
+
+    @media (max-width: 1350px) {
+      justify-content: center;
+    }
+
+    @include tablet {
+      justify-content: center;
+    }
+  }
+
+  &__caption {
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
+
+    &-main {
+      font-size: var(--font-size-large);
+      color: var(--color-accent);
+
+      @media (max-width: 450px) {
+        font-size: var(--font-size-medium);
+      }
+
+    }
+
+    &-text {
+      font-size: var(--font-size-small);
+
+      @media (max-width: 450px) {
+        font-size: var(--font-size-small);
+      }
+
+    }
+
+  }
+
+  &__form {
+
+    &-top {
+      display: flex;
+      gap: var(--gap-medium);
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &-bottom {
+      padding: var(--padding-large) 0;
+      @include mobile {
+        width: 320px;
+      }
+      @media (max-width: 450px) {
+        @include flex-column;
+        align-items: center;
+        text-align: center;
+        width: 250px;
+      }
+    }
+
+    &-data {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-medium);
+    }
+
+    &-button {
+      @include fluid-text(18, 24);
+      height: 70px;
+      min-width: 200px;
+    }
+
+    &-input {
+      width: 360px;
+      height: 70px;
+
+      @include tablet {
+        width: 320px;
+      }
+
+      @media (max-width: 450px) {
+        width: 250px;
+      }
+    }
+
+    &-textarea {
+      height: 156px;
+      width: 360px;
+      resize: none;
+
+      @include tablet {
+        width: 320px;
+      }
+
+      @media (max-width: 450px) {
+        width: 250px;
+      }
+    }
+
+  }
+
+  &__privacy {
+    color: var(--color-blue-grey);
+    padding: var(--padding-medium) 0;
+  }
+
+}

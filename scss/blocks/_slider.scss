@@ -1,0 +1,95 @@
+.slider {
+  &__card {
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--card-shadow-10);
+    cursor: all-scroll;
+    @include hover {
+      box-shadow: var(--card-shadow);
+    }
+    &-cover {
+      @include flex-column;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: var(--gap-small);
+      padding: var(--padding-xl);
+      height: 450px;
+      text-align: center;
+    }
+
+    &-image {
+      border-radius: var(--border-radius-medium);
+      background-position: center;
+    }
+
+    &-caption {
+      @include fluid-text(18, 20);
+      font-weight: 500;
+    }
+
+    &-description {
+      @include fluid-text(14,18);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+    &-button {
+      border-radius: var(--border-radius-small);
+      border: none;
+      color: var(--color-dark-80);
+      background-color: transparent;
+      height: 48px;
+
+      @include hover {
+        color: var(--color-dark);
+        background-color: var(--color-accent-2);
+      }
+    }
+  }
+
+  &__button {
+    width:40px;
+    height:40px;
+    background:#fff;
+    border-radius:50%;
+    border:none;
+    box-shadow: 0 6px 8px #00000030;
+    position:absolute;
+    top:50%;
+    left:20px;
+    transform:translateY(-50%);
+    z-index:1000;
+    cursor:pointer;
+
+    @include mobile {
+      left: 5px;
+    }
+
+    & svg {
+      fill:#333;
+      position:absolute;
+      height:80%;
+      left:50%;
+      top:50%;
+      transform:translate(-60%,-50%);
+    }
+
+    &-next {
+      left:auto;
+      right:20px;
+      @include mobile {
+        right: 5px;
+      }
+      & svg {
+        transform:translate(-40%,-50%);
+      }
+    }
+
+  }
+
+}
+
+.sales-hits__wrapper  > .swiper > .slider__cards-wrapper {
+  margin: var(--margin-medium) auto;
+}

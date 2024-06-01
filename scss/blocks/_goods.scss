@@ -1,0 +1,104 @@
+.goods {
+  display: flex;
+  width: 100%;
+  background-color: var(--color-grey-1);
+  padding-bottom: var(--padding-xl);
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(21.875rem, auto));
+    grid-gap: var(--gap-large);
+    @include mobile {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
+    }
+  }
+
+  &-card {
+    @include flex-column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-large);
+    padding: var(--padding-large);
+    gap: var(--gap-large);
+    height: 100%;
+
+    @include hover {
+      box-shadow: var(--card-shadow);
+    }
+
+    &__information {
+      @include flex-column;
+      align-items: center;
+      text-align: center;
+      gap: var(--gap-medium);
+    }
+
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__caption {
+      display: flex;
+      align-items: center;
+      min-height: 50px;
+      @include fluid-text(20, 24);
+      font-weight: 500;
+    }
+
+    &__description {
+      @include fluid-text(16,20);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      @include tablet {
+        @include fluid-text(16, 18)
+      }
+    }
+
+    &__button {
+      @include fluid-text(12, 14);
+      color: var(--color-grey);
+      background: var(--color-content);
+      width: fit-content;
+      @include hover {
+        background: #284460;
+      }
+      @include tablet {
+        @include fluid-text(14, 18)
+      }
+
+      &-wrapper {
+        display: flex;
+        gap: var(--gap-medium);
+        @include mobile {
+          gap: var(--gap-small);
+        }
+      }
+
+    }
+
+  }
+
+  &-modal {
+    border-radius: var(--border-radius-large);
+    border: none;
+
+    &__close-btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__description {
+      max-width: 600px;
+      margin: var(--margin-small);
+
+      @include mobile {
+        max-width: 400px;
+      }
+    }
+  }
+
+}

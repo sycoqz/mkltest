@@ -1,0 +1,21 @@
+.sales-hits {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  background-color: var(--color-grey-1);
+  padding-bottom: var(--margin-large);
+
+  &__wrapper {
+    flex-direction: column;
+    gap: var(--gap-large);
+  }
+
+  &__caption {
+    @include fluid-text(18,48);
+  }
+
+  &__slider {
+    width: 100%;
+  }
+}

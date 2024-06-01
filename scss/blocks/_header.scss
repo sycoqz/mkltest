@@ -1,0 +1,84 @@
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--color-light);
+
+  &__wrapper {
+    gap: var(--default-gap);
+
+    @include desktop {
+      padding: var(--padding-small);
+    }
+  }
+
+  &__menu {
+    font-size: 16px;
+    @include tablet {
+      font-size: 14px;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: var(--default-gap);
+
+      @include desktop {
+        gap: 0.5rem;
+      }
+    }
+
+    &-link {
+      @include fluid-text(14, 18);
+      color: var(--color-dark-80);
+      font-weight: 500;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      height: 48px;
+
+      @include hover {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        translate: -50%;
+        height: 2px;
+        width: 0;
+        background-color: currentColor;
+        transition-duration: inherit;
+      }
+    }
+  }
+  &__logo {
+    @include tablet {
+      max-width: 80px;
+      max-height: 80px;
+    }
+    @include mobile {
+      max-width: 64px;
+      max-height: 64px;
+    }
+  }
+
+  &__button {
+    margin-left: auto;
+    height: 44px;
+    color: var(--color-grey);
+    background-color: var(--color-content);
+    @include hover {
+      background-color: #284460;
+      border: 1px solid;
+    }
+    @include tablet {
+      padding-inline: 16px;
+    }
+  }
+}

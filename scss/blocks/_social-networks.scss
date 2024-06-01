@@ -1,0 +1,34 @@
+.social-networks {
+  @include fluid-text(14,32);
+  display: flex;
+  background-color: var(--color-content);
+  padding: var(--padding-xl) 0;
+
+  &__wrapper {
+    flex-direction: column;
+  }
+  &__caption {
+    color: var(--color-light);
+    margin-bottom: 3rem;
+  }
+  &__icons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    &-card {
+      @include flex-column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--gap-small);
+      color: var(--color-light);
+    }
+  }
+
+  &-link {
+    padding: 5px;
+    border-radius: var(--border-radius-large);
+    background-color: var(--color-grey)
+  }
+
+}

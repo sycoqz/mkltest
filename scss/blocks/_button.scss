@@ -1,0 +1,37 @@
+.button {
+  @include flex-center(true);
+  @include fluid-text(16,20);
+  height: var(--button-height);
+  padding-inline: 35px;
+  color: var(--color-content);
+  background-color: var(--color-grey);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  @include hover {
+    background-color: var(--color-content);
+    color: var(--color-grey);
+  }
+
+  &--transparent {
+    background: transparent;
+    @include hover {
+      border: none;
+    }
+  }
+  &--default {
+    color: var(--color-grey);
+    background-color: var(--color-content);
+    @include hover {
+      background: #284460;
+    }
+  }
+}
+
+.submit__button {
+  color: var(--color-grey);
+  background-color: var(--color-content);
+  @include hover {
+    background-color: #284460;
+  }
+}

@@ -1,0 +1,59 @@
+@mixin fluid-text($min: 16, $max: 48) {
+  font-size: clamp(#{$min}px, #{calc($max / 1920 * 100)}vw, #{$max}px);
+}
+
+@mixin reset-link {
+  color: inherit;
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin margin-containers {
+  width: 100%;
+  max-width: var(--width-containers);
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--default-padding) 0;
+  -webkit-margin-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding-inline-start: var(--default-padding);
+  padding-inline-end: var(--default-padding);
+}
+
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin square($size) {
+  width: $size;
+  aspect-ratio: 1;
+}

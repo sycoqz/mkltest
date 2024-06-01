@@ -1,0 +1,21 @@
+.description {
+  display: flex;
+  width: 100%;
+  padding: var(--padding-xl) 0;
+  background-color: var(--color-grey-1);
+
+  &__wrapper {
+    flex-direction: column;
+  }
+
+  &__text {
+    @include fluid-text(14,20);
+
+    &-block {
+      @include flex-column;
+      gap: var(--gap-medium);
+    }
+
+  }
+
+}

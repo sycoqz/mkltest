@@ -1,0 +1,127 @@
+.hero {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  &__image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include tablet {
+      height: 300px;
+    }
+    @include mobile {
+      height: 200px;
+    }
+  }
+
+  &__wrapper {
+    @include flex-column;
+    align-items: flex-start;
+    margin: 12rem auto;
+    width: 100%;
+
+    @include tablet {
+      align-items: center;
+      margin: auto;
+    }
+  }
+
+  &__block {
+    @include flex-column;
+    align-items: center;
+    gap: var(--gap-large);
+
+    &-cover {
+      @include flex-column;
+      padding: var(--padding-large);
+      background-color: var(--color-accent-2);
+      border-radius: var(--border-radius-large);
+      gap: var(--gap-small);
+
+      @include mobile {
+        max-width: 320px;
+      }
+
+      &-main {
+        max-width: 420px;
+        @include tablet {
+          display: none;
+        }
+      }
+
+    }
+
+    &-caption {
+      text-align: center;
+      @include fluid-text(32,48);
+
+      @include mobile {
+        @include fluid-text(24,32);
+      }
+    }
+
+    &-text {
+      @include fluid-text(14,18);
+    }
+
+    &-about-company {
+      max-width: fit-content;
+    }
+
+    &-button {
+      @include fluid-text(18, 20);
+      color: var(--color-dark);
+      border-radius: var(--border-radius-medium);
+      background-color: var(--color-accent-2);
+      border: none;
+      letter-spacing: 0.1rem;
+      padding-inline: 24px;
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-accent-2);
+        z-index: -2;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: var(--color-accent-2-dark);
+        transition: all .3s, width .35s cubic-bezier(.6,.3,.005,1.2);
+        border-radius: var(--border-radius-medium);
+        z-index: -1;
+      }
+
+      @include hover {
+        color: var(--color-dark);
+        background-color: var(--color-accent-2-dark);
+        &:after {
+          width: 100%;
+        }
+      }
+
+    }
+
+  }
+
+}
+

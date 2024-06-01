@@ -1,0 +1,26 @@
+@import "mixins";
+html {
+  scrollbar-gutter: stable;
+}
+body {
+  @include fluid-text(16, 18);
+
+  font-family: var(--font-familiy-base);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.28;
+  color: var(--color-dark);
+}
+
+a, button, input, textarea, svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input, textarea {
+  outline: none;
+}
