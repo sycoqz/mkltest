@@ -877,6 +877,10 @@ input, textarea {
     background-color: transparent;
   }
 }
+.goods__inspect-button img {
+  height: 100%;
+  object-fit: contain;
+}
 .goods-card {
   display: flex;
   flex-direction: column;
