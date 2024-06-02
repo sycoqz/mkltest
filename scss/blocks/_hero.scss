@@ -18,17 +18,19 @@
     @include mobile {
       height: 200px;
     }
+    &-cctv, &-about, &-internet, &-radio, &-techsupport {
+      height: 500px;
+    }
   }
 
   &__wrapper {
     @include flex-column;
     align-items: flex-start;
-    margin: 12rem auto;
+    margin: auto;
     width: 100%;
 
     @include tablet {
       align-items: center;
-      margin: auto;
     }
   }
 
@@ -113,7 +115,7 @@
 
       @include hover {
         color: var(--color-dark);
-        background-color: var(--color-accent-2-dark);
+        background-color: transparent;
         &:after {
           width: 100%;
         }

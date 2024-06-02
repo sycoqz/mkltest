@@ -416,7 +416,7 @@ input, textarea {
   height: 2px;
   background-color: var(--color-dark);
   border-radius: 25px;
-  box-shadow: 0 -8px, 0 8px;
+  box-shadow: 0 -8px var(--color-dark), 0 8px var(--color-dark);
 }
 
 ::-webkit-scrollbar {
@@ -621,11 +621,19 @@ input, textarea {
   height: 48px;
 }
 @media (hover: hover) {
+  .header__menu-link:hover {
+    text-shadow: 0 0 0.5px var(--color-dark), 0 0 0.5px var(--color-dark);
+    color: var(--color-dark);
+  }
   .header__menu-link:hover::after {
     width: 100%;
   }
 }
 @media (hover: none) {
+  .header__menu-link:active {
+    text-shadow: 0 0 0.5px var(--color-dark), 0 0 0.5px var(--color-dark);
+    color: var(--color-dark);
+  }
   .header__menu-link:active::after {
     width: 100%;
   }
@@ -721,17 +729,19 @@ input, textarea {
     height: 200px;
   }
 }
+.hero__image-cctv, .hero__image-about, .hero__image-internet, .hero__image-radio, .hero__image-techsupport {
+  height: 500px;
+}
 .hero__wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 12rem auto;
+  margin: auto;
   width: 100%;
 }
 @media (max-width: 1023px) {
   .hero__wrapper {
     align-items: center;
-    margin: auto;
   }
 }
 .hero__block {
@@ -815,7 +825,7 @@ input, textarea {
 @media (hover: hover) {
   .hero__block-button:hover {
     color: var(--color-dark);
-    background-color: var(--color-accent-2-dark);
+    background-color: transparent;
   }
   .hero__block-button:hover:after {
     width: 100%;
@@ -824,7 +834,7 @@ input, textarea {
 @media (hover: none) {
   .hero__block-button:active {
     color: var(--color-dark);
-    background-color: var(--color-accent-2-dark);
+    background-color: transparent;
   }
   .hero__block-button:active:after {
     width: 100%;

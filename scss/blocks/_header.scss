@@ -39,6 +39,8 @@
       height: 48px;
 
       @include hover {
+        text-shadow: 0 0 .5px var(--color-dark), 0 0 .5px var(--color-dark);
+        color: var(--color-dark);
         &::after {
           width: 100%;
         }
