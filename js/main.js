@@ -13,33 +13,34 @@ if (goodsInfoButtons.length) {
 async function onGoodsInfoClick() {
     const goodsId = this.dataset.good;
     let goodsInfo = {}
-    goodsInfo.id = goodsId
-    if (goodsInfo.id) {
-        goodsInfo.ajax = 'goodsInfo'
-        $.ajax({
-            url: '/',
-            data: goodsInfo,
-            error: result => {
-                console.error(result)
-            },
-            success: result => {
-                try {
-                    result = JSON.parse(result)
-                    const data = result[0],
-                        descDiv = document.querySelector('.goods-modal__description');
-                    descDiv.innerHTML = '';
-                    const getNodes = str => new DOMParser().parseFromString(str, 'text/html').body.childNodes;
-                    let contentNode = getNodes(data['content']);
-                    for (let node of contentNode) {
-                        descDiv.appendChild(node);
-                    }
-                    openModalAndLockScroll(document.querySelector('#goodsModal'));
-                } catch (e) {
-                    alert('Ошибка получения данных о товаре.')
-                }
-            }
-        })
-    }
+    openModalAndLockScroll(document.querySelector('#goodsModal'))
+    // goodsInfo.id = goodsId
+    // if (goodsInfo.id) {
+    //     goodsInfo.ajax = 'goodsInfo'
+    //     $.ajax({
+    //         url: '/',
+    //         data: goodsInfo,
+    //         error: result => {
+    //             console.error(result)
+    //         },
+    //         success: result => {
+    //             try {
+    //                 result = JSON.parse(result)
+    //                 const data = result[0],
+    //                     descDiv = document.querySelector('.goods-modal__description');
+    //                 descDiv.innerHTML = '';
+    //                 const getNodes = str => new DOMParser().parseFromString(str, 'text/html').body.childNodes;
+    //                 let contentNode = getNodes(data['content']);
+    //                 for (let node of contentNode) {
+    //                     descDiv.appendChild(node);
+    //                 }
+    //                 openModalAndLockScroll(document.querySelector('#goodsModal'));
+    //             } catch (e) {
+    //                 alert('Ошибка получения данных о товаре.')
+    //             }
+    //         }
+    //     })
+    // }
 }
 
 function onGoodsPurchaseClick() {
@@ -52,6 +53,9 @@ const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     slidesPerView: 1,
     spaceBetween: 10,
+    keyboard: {
+        enabled: true,
+    },
 
     pagination: {
         el: ".swiper-pagination",
