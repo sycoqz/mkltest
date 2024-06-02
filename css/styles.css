@@ -181,7 +181,7 @@ svg * {
   --color-accent-80: rgba(49, 130, 206, 0.8);
   --color-content: #2C4B6B;
   --color-blue-grey: #718096;
-  --font-family-base: Overpass, sans-serif;
+  --font-family-base: "Overpass", sans-serif;
   --transition-duration: 0.3s;
   --card-shadow-10: 0 0 8px rgba(0,0,0,0.1);
   --card-shadow: 0 0 20px rgba(0,0,0,0.2);
@@ -749,6 +749,9 @@ input, textarea {
   flex-direction: column;
   align-items: center;
   gap: var(--gap-large);
+}
+.hero__block-main {
+  width: 100%;
 }
 .hero__block-cover {
   display: flex;
