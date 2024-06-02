@@ -69,6 +69,11 @@ function onGoodsClick(e) {
     if (isInspectButton) {
         // modalGoodsInspect(result)
         openModalAndLockScroll(document.querySelector('#goodsInspect'));
+        let galleryButtons = document.querySelectorAll('.goods-modal__inspect-button');
+            galleryButtons.forEach(btn => {
+                btn.addEventListener('click', onGalleryButtonClick)
+            })
+        document.querySelectorAll('.goods-modal__inspect-sub_img').forEach(img => img.addEventListener('click', onImageClick))
     } else {
         // modalSetGoodsDesc(result)
         openModalAndLockScroll(document.querySelector('#goodsModal'));
