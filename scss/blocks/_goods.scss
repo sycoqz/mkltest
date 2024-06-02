@@ -13,6 +13,17 @@
     }
   }
 
+  &__inspect-button {
+    height: 128px;
+    display: flex;
+    padding-inline: 0;
+    border: none;
+    background-color: transparent;
+    @include hover {
+      background-color: transparent;
+    }
+  }
+
   &-card {
     @include flex-column;
     align-items: center;
@@ -84,13 +95,6 @@
   }
 
   &-modal {
-    border-radius: var(--border-radius-large);
-    border: none;
-
-    &__close-btn-wrapper {
-      display: flex;
-      justify-content: flex-end;
-    }
     &__description {
       max-width: 600px;
       margin: var(--margin-small);
@@ -99,6 +103,92 @@
         max-width: 400px;
       }
     }
+
+    &__inspect {
+
+      &-wrapper {
+        @include flex-column;
+        gap: var(--gap-large);
+        margin: var(--margin-small);
+        @media (orientation: landscape) and (max-width: 1024px) {
+          flex-direction: row;
+          max-height: 60vh;
+        }
+      }
+
+      &-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      &-main_img {
+        object-fit: contain;
+        object-position: center;
+        padding: var(--padding-medium);
+        height: 100%;
+        max-height: 500px;
+        width: 500px;
+
+        @include mobile {
+          max-height: 50vh;
+          max-width: 50vw;
+        }
+      }
+
+      &-sub_img {
+        margin: var(--margin-small) 0;
+        cursor: pointer;
+        padding: var(--padding-medium);
+        opacity: 0.6;
+        border: 1px solid var(--color-dark-80);
+        height: 100px;
+        width: 100px;
+        @media (orientation: landscape) and (max-width: 1024px) {
+          margin: 0 var(--margin-small);
+        }
+      }
+
+      &--active_img {
+        cursor: default;
+        opacity: 1;
+        border-width: 3px;
+        border-color: var(--color-accent);
+      }
+
+      &-gallery {
+        display: flex;
+        align-items: center;
+        gap: var(--gap-medium);
+        @media (orientation: landscape) and (max-width: 1024px) {
+          flex-direction: column;
+        }
+
+        &-wrapper {
+          max-width: calc(100% - 2rem);
+          margin: 0 auto;
+          overflow: hidden;
+          overflow-x: auto;
+          @media (orientation: landscape) and (max-width: 1024px) {
+            max-height: 30rem;
+            overflow-x: hidden;
+            overflow-y: auto;
+          }
+        }
+      }
+
+      &-button {
+        &-prev {
+          left: -20px;
+        }
+        &-next {
+          right: -20px;
+        }
+      }
+
+    }
+
   }
 
 }

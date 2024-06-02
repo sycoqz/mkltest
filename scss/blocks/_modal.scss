@@ -1,0 +1,14 @@
+.modal {
+
+  &-window {
+    border-radius: var(--border-radius-large);
+    border: none;
+    overflow: hidden;
+  }
+
+  &__close-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}

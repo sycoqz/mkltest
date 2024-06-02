@@ -39,10 +39,6 @@
     align-items: center;
     gap: var(--gap-large);
 
-    &-main {
-      width: 100%;
-    }
-
     &-cover {
       @include flex-column;
       padding: var(--padding-large);

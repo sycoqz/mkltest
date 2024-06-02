@@ -6,8 +6,6 @@
   padding: var(--padding-xl) 0;
 
   &-modal {
-    border-radius: var(--border-radius-large);
-    border: none;
     &__cover {
       @include flex-column;
       align-items: center;
