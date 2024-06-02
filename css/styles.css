@@ -750,6 +750,9 @@ input, textarea {
   align-items: center;
   gap: var(--gap-large);
 }
+.hero__block-main {
+  width: 100%;
+}
 .hero__block-cover {
   display: flex;
   flex-direction: column;
