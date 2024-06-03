@@ -10,6 +10,7 @@
       @include flex-column;
       align-items: center;
       gap: var(--gap-large);
+      height: 80vh;
       overflow: scroll;
     }
     &__wrapper {
