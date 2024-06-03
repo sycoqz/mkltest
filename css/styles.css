@@ -755,6 +755,11 @@ input, textarea {
   flex-direction: row;
   justify-content: space-between;
 }
+@media (max-width: 1023px) {
+  .hero__block-main {
+    flex-direction: column;
+  }
+}
 .hero__block-cover {
   display: flex;
   flex-direction: column;
