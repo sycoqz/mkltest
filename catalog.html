@@ -1,0 +1,624 @@
+<html lang="ru"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MKL Telecom</title>
+    <link rel="stylesheet" href="/css/styles.css">    <link rel="stylesheet" href="/css/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel=`stylesheet`"><noscript><link rel="stylesheet" href="/templates/default/assets/css/swiper-bundle.min.css"></noscript>    <meta name="description" content="Российская компания, предоставляющая услуги доступа в интернет, радиосвязи и видеонаблюдения  для комфортной работы и отдыха как на воде, так и на суше">
+    <meta name="keywords" content="MKL телеком, комплексная защита недвижимости, решения для дома,">
+    <meta name="google" content="notranslate">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MKL Telecom">
+    <meta property="og:url" content="https://framework.my">
+    <meta property="og:title" content="MKL Telecom">
+    <meta property="og:description" content="Российская компания, предоставляющая услуги доступа в интернет, радиосвязи и видеонаблюдения  для комфортной работы и отдыха как на воде, так и на суше">
+    <meta property="og:image" content="https://framework.my/settings/logo.svg/">
+</head>
+<body>
+<header class="header">
+    <div class="header__wrapper wrapper">
+        <a href="/" class="header__logo logo">
+            <img src="/userfiles/settings/logo.svg" width="100" height="100" alt="MKL Telecom" class="logo_image" loading="lazy">
+        </a>
+        <button class="header__button modal__open-btn button hidden-mobile" type="button">Консультация</button>
+        <nav class="header__menu hidden-mobile">
+            <ul class="header__menu-list">
+                <li class="header__menu-item"><a href="/" class="header__menu-link">Главная</a></li>
+
+                <li class="header__menu-item"><a href="/internet/" class="header__menu-link">Интернет</a></li>
+
+                <li class="header__menu-item"><a href="/radiosvyaz/" class="header__menu-link">Радиосвязь</a></li>
+
+                <li class="header__menu-item"><a href="/videonablyudenie/" class="header__menu-link">Видеонаблюдение</a></li>
+
+                <li class="header__menu-item"><a href="/techsupport/" class="header__menu-link">Тех.поддержка</a></li>
+
+            </ul>
+        </nav>
+        <button class="header__burger-button modal__open-btn burger-button visible-mobile" type="button" aria-label="Открыть навигационное меню" onclick="mobileOverlay.showModal()">
+            <span class="visually-hidden">Открыть навигационное меню</span>
+        </button>
+    </div>
+</header>
+<main class="content"><nav class="breadcrumbs wrapper">
+    <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="/">
+                <span class="breadcrumbs__link-text">Главная</span>
+            </a>
+        </li>
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="/catalog/">
+                <span class="breadcrumbs__link-text">Каталог товаров</span>
+            </a>
+        </li>
+    </ul>
+</nav><section class="catalog wrapper">
+    <div class="catalog__inner">
+        <aside class="catalog__aside">
+            <h3 class="catalog__aside-title">Продукты</h3>
+            <div class="catalog__search">
+                <form class="catalog__search-form search search-internal" action="/search/">
+                    <button class="catalog__search-button button">
+                        <svg class="inline-svg-icon svg-search">
+                            <use xlink:href="/img/icons.svg#search"></use>
+                        </svg>
+                    </button>
+                    <label class="catalog__search-label search search-internal">
+                        <input type="search" name="search" placeholder="Поиск по каталогу" autocomplete="off" autocapitalize="off" spellcheck="false">
+                    </label>
+                </form>
+            </div>
+            <div class="catalog__filter-category">
+                <ul class="catalog__filter-category-list">
+                    <li class="catalog__filter-category-item">
+                        <a href="/catalog/" class="catalog__filter-item-toggle catalog__filter-item-toggle--active">Все</a>
+                    </li>
+                    <li class="catalog__filter-category-item">
+                        <a href="/catalog/internet/" class="catalog__filter-item-toggle ">
+                            Интернет                                    </a>
+                    </li>
+                    <li class="catalog__filter-category-item">
+                        <a href="/catalog/videonablyudenie/" class="catalog__filter-item-toggle ">
+                            Видеонаблюдение                                    </a>
+                    </li>
+                    <li class="catalog__filter-category-item">
+                        <a href="/catalog/radiosvyaz/" class="catalog__filter-item-toggle ">
+                            Радиосвязь                                    </a>
+                    </li>
+                </ul>
+            </div>
+            <form action="/catalog/" class="catalog__filter">
+                <div class="catalog__filter-wrapper">
+                    <div class="catalog__filter-item">
+                        <div class="catalog__filter-item-caption">
+                            <span class="catalog__filter-item-title">Цена, ₽</span>
+                            <div class="catalog__filter-hide-toggle">
+                                <input type="checkbox" class="accordion-button" id="filter-1">
+                                <label for="filter-1" class="accordion-label"></label>
+                            </div>
+                        </div>
+                        <div class="catalog__filter-item-content">
+                            <div class="catalog__filter-range-slider">
+                                <div class="catalog__filter-range-inputs">
+                                    <div class="catalog__filter-range-limit">
+                                        <p class="catalog__filter-range-text">От</p>
+                                        <label>
+                                            <input name="min_price" type="text" value="120" class="catalog__filter-range-input js-rangeSliderMinimal">
+                                        </label>
+                                    </div>
+                                    <div class="catalog__filter-range-limit">
+                                        <p class="catalog__filter-range-text">До</p>
+                                        <label>
+                                            <input name="max_price" type="text" value="180000" class="catalog__filter-range-input js-rangeSliderMaximal">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__filter-item">
+                        <div class="catalog__filter-item-caption">
+                            <span class="catalog__filter-item-title">Цвет</span>
+                            <div class="catalog__filter-item-hide-toggle">
+                                <input type="checkbox" class="accordion-button" id="filter-2">
+                                <label for="filter-2" class="accordion-label"></label>
+                            </div>
+                        </div>
+                        <div class="catalog__filter-item-content">
+                            <ul class="catalog__filter-item-list">
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="74" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">Чёрный</span>
+                                        <span class="checkbox__type">(4)</span>
+                                    </label>
+                                </li>
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="73" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">Синий</span>
+                                        <span class="checkbox__type">(3)</span>
+                                    </label>
+                                </li>
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="88" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">Белый</span>
+                                        <span class="checkbox__type">(3)</span>
+                                    </label>
+                                </li>
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="72" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">Красный</span>
+                                        <span class="checkbox__type">(2)</span>
+                                    </label>
+                                </li>
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="89" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">Оранжевый</span>
+                                        <span class="checkbox__type">(2)</span>
+                                    </label>
+                                </li>
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="93" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">Голубой</span>
+                                        <span class="checkbox__type">(1)</span>
+                                    </label>
+                                </li>
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="94" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">Фиолетовый</span>
+                                        <span class="checkbox__type">(1)</span>
+                                    </label>
+                                </li>
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="95" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">Коричневый</span>
+                                        <span class="checkbox__type">(1)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="catalog__filter-item">
+                        <div class="catalog__filter-item-caption">
+                            <span class="catalog__filter-item-title">Интернет</span>
+                            <div class="catalog__filter-item-hide-toggle">
+                                <input type="checkbox" class="accordion-button" id="filter-3">
+                                <label for="filter-3" class="accordion-label"></label>
+                            </div>
+                        </div>
+                        <div class="catalog__filter-item-content">
+                            <ul class="catalog__filter-item-list">
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="76" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">3G</span>
+                                        <span class="checkbox__type">(1)</span>
+                                    </label>
+                                </li>
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="77" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">4G</span>
+                                        <span class="checkbox__type">(3)</span>
+                                    </label>
+                                </li>
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="78" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">5G</span>
+                                        <span class="checkbox__type">(3)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="catalog__filter-item">
+                        <div class="catalog__filter-item-caption">
+                            <span class="catalog__filter-item-title">Акция</span>
+                            <div class="catalog__filter-item-hide-toggle">
+                                <input type="checkbox" class="accordion-button" id="filter-4">
+                                <label for="filter-4" class="accordion-label"></label>
+                            </div>
+                        </div>
+                        <div class="catalog__filter-item-content">
+                            <ul class="catalog__filter-item-list">
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="83" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">Хит</span>
+                                        <span class="checkbox__type">(2)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="catalog__filter-item">
+                        <div class="catalog__filter-item-caption">
+                            <span class="catalog__filter-item-title">Гарантия</span>
+                            <div class="catalog__filter-item-hide-toggle">
+                                <input type="checkbox" class="accordion-button" id="filter-5">
+                                <label for="filter-5" class="accordion-label"></label>
+                            </div>
+                        </div>
+                        <div class="catalog__filter-item-content">
+                            <ul class="catalog__filter-item-list">
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="87" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">2 года</span>
+                                        <span class="checkbox__type">(1)</span>
+                                    </label>
+                                </li>
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="86" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">1 год</span>
+                                        <span class="checkbox__type">(1)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="catalog__filter-item">
+                        <div class="catalog__filter-item-caption">
+                            <span class="catalog__filter-item-title">Дальность действия</span>
+                            <div class="catalog__filter-item-hide-toggle">
+                                <input type="checkbox" class="accordion-button" id="filter-6">
+                                <label for="filter-6" class="accordion-label"></label>
+                            </div>
+                        </div>
+                        <div class="catalog__filter-item-content">
+                            <ul class="catalog__filter-item-list">
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="91" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">500м</span>
+                                        <span class="checkbox__type">(1)</span>
+                                    </label>
+                                </li>
+                                <li class="catalog__filter-item-unit">
+                                    <label class="catalog__filter-item-check checkbox">
+                                        <input type="checkbox" name="filters[]" value="92" class="checkbox__box visually-hidden">
+                                        <span class="checkbox__span"></span>
+                                        <span class="checkbox__text">1000м</span>
+                                        <span class="checkbox__type">(1)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__filter-button-wrapper">
+                    <button type="submit" class="catalog__filter-button button">Применить</button>
+                </div>
+            </form>
+        </aside>
+        <div class="catalog__products">
+            <div class="catalog__products-top">
+                <div class="catalog__products-count">Найдено 29 товаров</div>
+                <ul class="catalog__products-pagination catalog__products-pagination-top">
+                    <li class="catalog__products-pagination-item  pagination-current"><a href="">
+                        1
+                    </a></li>    <li class="catalog__products-pagination-item"><a href="/catalog/?page=2">
+                    2
+                </a></li>    <li class="catalog__products-pagination-item"><a href="/catalog/?page=3">
+                    3
+                </a></li>    <li class="catalog__products-pagination-item"><a href="/catalog/?page=4">
+                    4
+                </a></li>    <li class="catalog__products-pagination-item"><a href="/catalog/?page=2">
+                    &gt;
+                </a></li>    <li class="catalog__products-pagination-item"><a href="/catalog/?page=4">
+                    &gt;&gt;
+                </a></li>                    </ul>
+            </div>
+            <div class="catalog__products-cards">
+                <div class="catalog__products-cards-list">
+
+                    <li class="card-item card-item__internal" data-productcontainer="">
+                        <article class="card-item__wrapper">
+                            <div class="card-item__tabs-image">
+                                <img src="/userfiles/goods/vi6rs.png" alt="Vi6RS">
+                            </div>
+                            <div class="card-item__tabs-description">
+                                <div class="card-item__tabs-content">
+                                    <span class="card-item__tabs-content-title">Маршрутизатор мультиоператорный Vi6RS</span>
+                                </div>
+                                <div class="card-item__tabs-price">Цена:                <span class="card-item-new-price">120 руб.</span>
+                                </div>
+                            </div>
+                            <a href="/product/vi6rs/" class="card-item__button button">Подробнее</a>
+                        </article>
+                    </li>
+
+                    <li class="card-item card-item__internal" data-productcontainer="">
+                        <article class="card-item__wrapper">
+                            <div class="card-item__tabs-image">
+                                <img src="/userfiles/goods/vi8rs.png" alt="Vi8RS">
+                            </div>
+                            <div class="card-item__tabs-description">
+                                <div class="card-item__tabs-content">
+                                    <span class="card-item__tabs-content-title">Маршрутизатор мультиоператорный Vi8RS</span>
+                                </div>
+                                <div class="card-item__tabs-price">Цена:<span class="card-item-old-price">150руб.</span>                <span class="card-item-new-price">127.5 руб.</span>
+                                </div>
+                            </div>
+                            <a href="/product/vi8rs/" class="card-item__button button">Подробнее</a>
+                        </article>
+                    </li>
+
+                    <li class="card-item card-item__internal" data-productcontainer="">
+                        <article class="card-item__wrapper">
+                            <div class="card-item__tabs-image">
+                                <img src="/userfiles/goods/vi6h.png" alt="Vi6H">
+                            </div>
+                            <div class="card-item__tabs-description">
+                                <div class="card-item__tabs-content">
+                                    <span class="card-item__tabs-content-title">Маршрутизатор мультиоператорный Vi6H</span>
+                                </div>
+                                <div class="card-item__tabs-price">Цена:<span class="card-item-old-price">200руб.</span>                <span class="card-item-new-price">190 руб.</span>
+                                </div>
+                            </div>
+                            <a href="/product/vi6h/" class="card-item__button button">Подробнее</a>
+                        </article>
+                    </li>
+
+                    <li class="card-item card-item__internal" data-productcontainer="">
+                        <article class="card-item__wrapper">
+                            <div class="card-item__tabs-image">
+                                <img src="/userfiles/goods/vi4ps.png" alt="Vi4RS">
+                            </div>
+                            <div class="card-item__tabs-description">
+                                <div class="card-item__tabs-content">
+                                    <span class="card-item__tabs-content-title">Маршрутизатор мультиоператорный Vi4RS</span>
+                                </div>
+                                <div class="card-item__tabs-price">Цена:                <span class="card-item-new-price">16000 руб.</span>
+                                </div>
+                            </div>
+                            <a href="/product/vi4rs/" class="card-item__button button">Подробнее</a>
+                        </article>
+                    </li>
+
+                    <li class="card-item card-item__internal" data-productcontainer="">
+                        <article class="card-item__wrapper">
+                            <div class="card-item__tabs-image">
+                                <img src="/userfiles/goods/incarnet_vi4h.png" alt="Incarnet Vi4H">
+                            </div>
+                            <div class="card-item__tabs-description">
+                                <div class="card-item__tabs-content">
+                                    <span class="card-item__tabs-content-title">Маршрутизатор мультиоператорный Incarnet Vi4H</span>
+                                </div>
+                                <div class="card-item__tabs-price">Цена:                <span class="card-item-new-price">32000 руб.</span>
+                                </div>
+                            </div>
+                            <a href="/product/incarnet-vi4h/" class="card-item__button button">Подробнее</a>
+                        </article>
+                    </li>
+
+                    <li class="card-item card-item__internal" data-productcontainer="">
+                        <article class="card-item__wrapper">
+                            <div class="card-item__tabs-image">
+                                <img src="/userfiles/goods/incarnetvi8-ur.png" alt="Incarnet Vi8-UR">
+                            </div>
+                            <div class="card-item__tabs-description">
+                                <div class="card-item__tabs-content">
+                                    <span class="card-item__tabs-content-title">Маршрутизатор мультиоператорный Incarnet Vi8-UR</span>
+                                </div>
+                                <div class="card-item__tabs-price">Цена:                <span class="card-item-new-price">180000 руб.</span>
+                                </div>
+                            </div>
+                            <a href="/product/incarnet-vi8-ur/" class="card-item__button button">Подробнее</a>
+                        </article>
+                    </li>
+
+                    <li class="card-item card-item__internal" data-productcontainer="">
+                        <article class="card-item__wrapper">
+                            <div class="card-item__tabs-image">
+                                <img src="/userfiles/goods/t5.png" alt="T5">
+                            </div>
+                            <div class="card-item__tabs-description">
+                                <div class="card-item__tabs-content">
+                                    <span class="card-item__tabs-content-title">Видеорегистратор T5</span>
+                                </div>
+                                <div class="card-item__tabs-price">Цена:                <span class="card-item-new-price"> руб.</span>
+                                </div>
+                            </div>
+                            <a href="/product/t5/" class="card-item__button button">Подробнее</a>
+                        </article>
+                    </li>
+
+                    <li class="card-item card-item__internal" data-productcontainer="">
+                        <article class="card-item__wrapper">
+                            <div class="card-item__tabs-image">
+                                <img src="/userfiles/goods/rec_t2.png" alt="T2">
+                            </div>
+                            <div class="card-item__tabs-description">
+                                <div class="card-item__tabs-content">
+                                    <span class="card-item__tabs-content-title">Видеорегистратор T2</span>
+                                </div>
+                                <div class="card-item__tabs-price">Цена:                <span class="card-item-new-price"> руб.</span>
+                                </div>
+                            </div>
+                            <a href="/product/t2/" class="card-item__button button">Подробнее</a>
+                        </article>
+                    </li>
+
+                    <li class="card-item card-item__internal" data-productcontainer="">
+                        <article class="card-item__wrapper">
+                            <div class="card-item__tabs-image">
+                                <img src="/userfiles/goods/ir_technologies_d126_940_90.png" alt="IR Technologies D126-940-90">
+                            </div>
+                            <div class="card-item__tabs-description">
+                                <div class="card-item__tabs-content">
+                                    <span class="card-item__tabs-content-title">Инфракрасный прожектор для всепогодной работы IR Technologies D126-940-90 (DC10.5-30V)</span>
+                                </div>
+                                <div class="card-item__tabs-price">Цена:                <span class="card-item-new-price"> руб.</span>
+                                </div>
+                            </div>
+                            <a href="/product/ir-technologies-d126-940-90/" class="card-item__button button">Подробнее</a>
+                        </article>
+                    </li>
+                </div>
+            </div>
+            <div class="catalog__products-pagination-bottom">
+                <ul class="catalog__products-pagination">
+                    <li class="catalog__products-pagination-item  pagination-current"><a href="">
+                        1
+                    </a></li>    <li class="catalog__products-pagination-item"><a href="/catalog/?page=2">
+                    2
+                </a></li>    <li class="catalog__products-pagination-item"><a href="/catalog/?page=3">
+                    3
+                </a></li>    <li class="catalog__products-pagination-item"><a href="/catalog/?page=4">
+                    4
+                </a></li>    <li class="catalog__products-pagination-item"><a href="/catalog/?page=2">
+                    &gt;
+                </a></li>    <li class="catalog__products-pagination-item"><a href="/catalog/?page=4">
+                    &gt;&gt;
+                </a></li>                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="footer">
+    <div class="footer__wrapper wrapper">
+        <div class="footer__contacts">
+            <ul class="footer__contacts-list">
+                <li class="footer__contacts-item"><a href="/techsupport/">mka@mkl.group</a></li>
+                <li class="footer__contacts-item"><a href="/techsupport/">+8(968)-555-11-01</a></li>
+                <li class="footer__contacts-item"><a href="/techsupport/">Новомарьинская ул, 12/12 к1, Москва, Россия, 109652</a></li>
+            </ul>
+            <div class="footer__copyright">
+                <p>© MKL Telecom. Все права защищены.</p>
+            </div>
+            <div class="footer__social-networks">
+                <a class="footer__social-networks-link" href="https://t.me/+3sbsuQtGiOk3NTE6" rel="noopener" target="_blank">
+                    <img class="social-networks__image" src="/userfiles/social_networks/tg-black.svg" width="32px" height="32px" alt="Telegram" loading="lazy">
+                </a>
+                <a class="footer__social-networks-link" href="https://api.whatsapp.com/send?phone=79685551101&amp;text=WhatsApp" rel="noopener" target="_blank">
+                    <img class="social-networks__image" src="/userfiles/social_networks/wa-black.svg" width="32px" height="32px" alt="Whatsapp" loading="lazy">
+                </a>
+                <a class="footer__social-networks-link" href="https://vk.com/club224681363" rel="noopener" target="_blank">
+                    <img class="social-networks__image" src="/userfiles/social_networks/vk-black.svg" width="32px" height="32px" alt="ВКонтакте" loading="lazy">
+                </a>
+            </div>
+        </div>
+        <div class="footer__menu">
+            <ul class="footer__menu-list">
+                <li class="footer__menu-item"><a href="/" class="footer__menu-link">Главная</a></li>
+                <li class="footer__menu-item"><a href="/internet/" class="footer__menu-link">Интернет</a></li>
+                <li class="footer__menu-item"><a href="/radiosvyaz/" class="footer__menu-link">Радиосвязь</a></li>
+                <li class="footer__menu-item"><a href="/videonablyudenie/" class="footer__menu-link">Видеонаблюдение</a></li>
+                <li class="footer__menu-item"><a href="/techsupport/" class="footer__menu-link">Тех.поддержка</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<dialog class="feedback-modal modal-window" id="modalConsultation">
+    <form class="feedback-modal__close-btn-wrapper modal__close-btn-wrapper" method="dialog">
+        <button class="feedback-modal__close-btn modal__close-btn cross-btn" type="submit" aria-label="Закрыть окно консультации">
+            <span class="visually-hidden">Закрыть окно консультации</span>
+        </button>
+    </form>
+    <section class="feedback-modal__wrapper">
+        <div class="feedback-modal__cover">
+            <div class="feedback__caption">
+                <p class="feedback__caption-main">Заказать консультацию</p>
+            </div>
+            <form action="" class="feedback-modal__form feedback__form">
+                <div class="feedback-modal__form-top feedback__form-top">
+                    <div class="feedback__form-data">
+                        <label for="feedback__name" class="feedback__form-name"><input id="feedback__name" type="text" class="feedback__form-input input-text" placeholder="Имя" required="" aria-required="true"></label>
+                        <label for="feedback__phone" class="feedback__form-phone"><input type="text" id="feedback__phone" class="feedback__form-input input-text" placeholder="Телефон" required="" aria-required="true"></label>
+                    </div>
+                    <div class="feedback__form-textarea">
+                        <label for="feedback__text" class="feedback__form-text"><textarea name="feedback__text" id="feedback__text" class="feedback__form-textarea input-text" placeholder="Ваше сообщение" required="" aria-required="true"></textarea></label>
+                    </div>
+                </div>
+                <div class="feedback-modal__form-bottom feedback__form-bottom">
+                    <button class="feedback__form-button button submit__button" type="submit" aria-label="Отправить форму обратной связи">Отправить</button>
+                    <p class="feedback__privacy">Нажимая на кнопку, я соглашаюсь на обработку персональных данных</p>
+                </div>
+            </form>
+        </div>
+    </section>
+</dialog>
+<dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+    <form class="mobile-overlay__close-btn-wrapper modal__close-btn-wrapper" method="dialog">
+        <button class="mobile-overlay__close-btn modal__close-btn cross-btn" type="submit" aria-label="Закрыть навигационное меню">
+            <span class="visually-hidden">Закрыть навигационное меню</span>
+        </button>
+    </form>
+    <section class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+            <li class="mobile-overlay__item"><a href="/" class="mobile-overlay__link">Главная</a></li>
+            <li class="mobile-overlay__item"><a href="/internet/" class="mobile-overlay__link">Интернет</a></li>
+            <li class="mobile-overlay__item"><a href="/radiosvyaz/" class="mobile-overlay__link">Радиосвязь</a></li>
+            <li class="mobile-overlay__item"><a href="/videonablyudenie/" class="mobile-overlay__link">Видеонаблюдение</a></li>
+            <li class="mobile-overlay__item"><a href="/techsupport/" class="mobile-overlay__link">Тех.поддержка</a></li>
+        </ul>
+    </section>
+</dialog>
+<dialog class="goods-modal modal-window" id="goodsModal">
+    <form class="goods-modal__close-btn-wrapper modal__close-btn-wrapper" method="dialog">
+        <button class="goods-modal__close-btn modal__close-btn cross-btn" type="submit" aria-label="Закрыть подробности о товаре">
+            <span class="visually-hidden">Закрыть навигационное меню</span>
+        </button>
+    </form>
+    <section class="goods-modal__wrapper">
+        <div class="goods-modal__description"></div>
+    </section>
+</dialog>
+<dialog class="goods-modal__inspect modal-window" id="goodsInspect">
+    <form class="goods-modal__close-btn-wrapper modal__close-btn-wrapper" method="dialog">
+        <button class="goods-modal__close-btn modal__close-btn cross-btn" type="submit" aria-label="Закрыть галерею товара">
+            <span class="visually-hidden">Закрыть навигационное меню</span>
+        </button>
+    </form>
+    <section class="goods-modal__inspect-wrapper">
+        <div class="goods-modal__inspect-image">
+            <img class="goods-modal__inspect-main_img" src="" alt="" loading="lazy">
+            <div class="goods-modal__inspect-button goods-modal__inspect-button-prev slider__button slider__button-prev" tabindex="0">
+                <svg viewBox="0 0 256 512">
+                    <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path>
+                </svg>
+            </div>
+            <div class="goods-modal__inspect-button goods-modal__inspect-button-next slider__button slider__button-next" tabindex="0">
+                <svg viewBox="0 0 256 512">
+                    <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="goods-modal__inspect-gallery-wrapper">
+            <div class="goods-modal__inspect-gallery"></div>
+        </div>
+    </section>
+</dialog>
+<script src="/js/swiper-bundle.min.js"></script>
+<script src="/js/jquery-3.7.1.min.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/showMessage.js"></script>
+<script src="/js/main.js"></script>
+
+</body></html>
