@@ -1,0 +1,20 @@
+.breadcrumbs {
+  display: flex;
+
+  &__list {
+    display: flex;
+    gap: var(--gap-medium);
+  }
+
+  &__link {
+
+    &-text {
+      @include fluid-text(16,20);
+    }
+
+    &-next-arrow {
+      background-image: none;
+    }
+
+  }
+}

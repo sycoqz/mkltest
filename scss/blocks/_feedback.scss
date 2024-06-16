@@ -10,8 +10,8 @@
       @include flex-column;
       align-items: center;
       gap: var(--gap-large);
-      height: 80vh;
-      overflow: scroll;
+      height: 50%;
+      overflow: auto;
     }
     &__wrapper {
       display: flex;
@@ -157,7 +157,7 @@
 
   &__privacy {
     color: var(--color-blue-grey);
-    padding: var(--padding-medium) 0;
+    padding-top: var(--padding-medium);
   }
 
 }

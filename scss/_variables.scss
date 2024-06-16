@@ -2,14 +2,18 @@
   --color-light: #ffffff;
   --color-grey: #E2E8F0;
   --color-grey-1: #F7FAFC;
+  --color-grey-2: #f1f1f5;
+  --color-disabled: #d4dde1;
   --color-dark: #1e1d1d;
-  --color-dark-80:#1E1D1DCC;
+  --color-dark-80: #1E1D1DCC;
+  --color-dark-40: #1E1D1D66;
   --color-accent-2: #C9C222;
   --color-accent-2-80: rgba(201, 194, 34, 0.8);
   --color-accent-2-dark: #aba51c;
   --color-accent: #3182ce;
   --color-accent-80: rgba(49, 130, 206, 0.8);
   --color-content: #2C4B6B;
+  --color-content-dark: #183a56;
   --color-blue-grey: #718096;
   --font-family-base: Overpass, sans-serif;
   --transition-duration: 0.3s;
@@ -39,6 +43,7 @@
   --font-size-small: 1.25rem;
   --font-size-medium: 2rem;
   --font-size-large: 3rem;
+  --margin-xs: 0.5rem;
   --margin-small: 1rem;
   --margin-medium: 2rem;
   --margin-large: 3rem;

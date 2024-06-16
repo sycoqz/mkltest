@@ -1,0 +1,26 @@
+.accordion-button {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.accordion-label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.accordion-label::after {
+  content: "❯";
+  height: 1em;
+  width: 1em;
+  color: var(--color-dark-40);
+  text-align: center;
+  transition: .3s;
+  transform: rotate(90deg);
+}
+
+.accordion-button:checked + .accordion-label::after {
+  transform: rotate(-90deg);
+}

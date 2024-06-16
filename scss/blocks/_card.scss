@@ -1,0 +1,62 @@
+.card-item {
+  display: block;
+  height: 520px;
+  width: 300px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    background-color: var(--color-light);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--border-radius-medium);
+    padding: var(--padding-large);
+  }
+
+  &-new-price {
+    margin-left: var(--margin-xs);
+  }
+
+  &-old-price {
+    margin-left: var(--margin-xs);
+    font-weight: 600;
+    text-decoration: line-through;
+  }
+
+  &__tabs {
+
+    &-image img {
+      width: 256px;
+      height: 256px;
+      object-fit: contain;
+    }
+
+    &-description {
+      @include fluid-text(16,18);
+      @include flex-column;
+      gap: var(--gap-small);
+      margin: var(--padding-medium) 0;
+    }
+
+    &-content, &-price {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    @include fluid-text(16, 20);
+    height: 48px;
+    border: none;
+    border-radius: var(--border-radius-medium);
+    color: var(--color-light);
+    background-color: var(--color-accent);
+    @include hover {
+      color: var(--color-light);
+      background-color: var(--color-accent);
+    }
+  }
+}

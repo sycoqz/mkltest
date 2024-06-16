@@ -11,6 +11,10 @@
   &__text {
     @include fluid-text(14,20);
 
+    & p {
+      @include fluid-text(14,20);
+    }
+
     &-block {
       @include flex-column;
       gap: var(--gap-medium);

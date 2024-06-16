@@ -1,0 +1,291 @@
+.catalog {
+  display: flex;
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    gap: var(--gap-large);
+  }
+
+  &__aside {
+    width: 17.6rem;
+    min-width: 17.6rem;
+
+    &-title {
+      @include fluid-text(18,24);
+      padding-bottom: 4px;
+      border-bottom: 2px solid var(--color-dark-80);
+    }
+  }
+
+  &__search {
+    margin: var(--margin-small) 0;
+    &-form {
+      display: flex;
+      width: 100%;
+      position: relative;
+    }
+    &-label {
+      width: 100%;
+      & input {
+        border: none;
+        width: 100%;
+        background-color: var(--color-grey-2);
+        border-radius: var(--border-radius-medium);
+        padding: var(--padding-small);
+        padding-left: 42px;
+
+        @include hover {
+          background-color: var(--color-grey);
+        }
+
+        &:focus {
+          border: 1px solid var(--color-accent);
+          box-shadow: inset 1px 0 0 var(--color-accent),
+          inset 0 1px 0 var(--color-accent),
+          inset -1px 0 0 var(--color-accent),
+          inset 0 -1px 0 var(--color-accent);
+        }
+
+        &::placeholder {
+          color: var(--color-dark-80);
+        }
+      }
+    }
+
+    &-button {
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      background-color: transparent;
+      border: none;
+      padding-inline: 0;
+      @include square(1.5rem);
+      @include hover {
+        background-color: transparent;
+      }
+      & svg {
+        @include square(1.5rem);
+      }
+    }
+  }
+
+  &__products {
+    width: inherit;
+
+    &-top {
+      height: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--margin-small);
+    }
+
+    &-count {
+      @include fluid-text(16,20);
+    }
+
+    &-pagination {
+      @include fluid-text(18,20);
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--color-grey);
+
+      &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 48px;
+        color: var(--color-dark-80);
+        cursor: pointer;
+        background-color: var(--color-grey-2);
+        border-right: 1px solid var(--color-grey);
+        @include hover {
+          color: var(--color-accent);
+          background-color: var(--color-grey);
+        }
+        & a {
+          padding: 6px 12px;
+        }
+      }
+      &-bottom {
+        display: flex;
+        margin-top: var(--margin-medium);
+        margin-bottom: var(--margin-xs);
+        justify-content: center;
+      }
+    }
+
+    &-cards {
+      @include flex-column;
+
+      &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap-medium);
+      }
+    }
+
+  }
+
+  &__filter {
+
+    &-wrapper {
+      max-height: 1080px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding-right: var(--padding-large);
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--color-dark-40);
+      }
+    }
+
+    &-item {
+      @include flex-column;
+      margin-bottom: var(--margin-medium);
+
+      &-caption {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-content {
+        max-height: 190px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-top: var(--margin-small);
+        padding-right: var(--padding-medium);
+        &::-webkit-scrollbar-thumb {
+          background-color: var(--color-dark-40);
+        }
+      }
+
+      &-title {
+        @include fluid-text(16, 20);
+        font-weight: 500;
+      }
+
+      &-hide-toggle {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-toggle {
+        @include fluid-text(14,18);
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-weight: 500;
+        padding: var(--padding-small);
+        color: var(--color-dark-80);
+
+        @include hover {
+          background-color: var(--color-accent);
+          color: var(--color-light);
+          font-weight: 600;
+        }
+
+        &--active {
+          color: var(--color-light);
+          background-color: var(--color-accent);
+          font-weight: 600;
+        }
+      }
+    }
+
+    &-category {
+
+      &-list {
+        margin-bottom: var(--margin-medium);
+      }
+
+      &-item {
+        display: flex;
+        margin: var(--margin-xs) 0;
+      }
+    }
+
+    &-apply {
+      display: flex;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: center;
+
+      &-checkbox {
+        cursor: pointer;
+        background-color: var(--color-grey-2);
+        margin-right: var(--margin-small);
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: var(--border-radius-medium);
+        border: 1px solid var(--color-grey);
+        &:checked {
+          accent-color: var(--color-accent);
+        }
+      }
+
+    }
+
+    &-range {
+
+      &-text {
+        color: var(--color-dark-80);
+      }
+
+      &-inputs {
+        display: flex;
+        gap: var(--gap-medium);
+      }
+
+      &-limit {
+        @include flex-column;
+      }
+
+      &-input {
+        height: 36px;
+        padding: 6px 12px;
+        background-color: var(--color-grey-2);
+        border: 1px solid var(--color-grey-2);
+        width: 100%;
+        border-radius: var(--border-radius-medium);
+
+        @include hover {
+          background-color: var(--color-grey);
+          border-color: var(--color-grey);
+        }
+
+        &:focus {
+          border-color: var(--color-accent);
+          box-shadow: inset 1px 0 0 var(--color-accent),
+          inset 0 1px 0 var(--color-accent),
+          inset -1px 0 0 var(--color-accent),
+          inset 0 -1px 0 var(--color-accent);
+        }
+      }
+
+    }
+
+    &-button {
+      height: 48px;
+      color: var(--color-light);
+      background-color: var(--color-accent);
+      border: 1px solid var(--color-accent);
+      border-radius: var(--border-radius-medium);
+
+      @include hover {
+        color: var(--color-light);
+        background-color: var(--color-accent);
+        border: 1px solid var(--color-accent);
+      }
+      &-wrapper {
+        margin-top: var(--margin-medium);
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+  }
+
+}

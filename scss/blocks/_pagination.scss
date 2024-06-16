@@ -1,0 +1,9 @@
+.pagination-current {
+  font-weight: 600;
+  color: var(--color-accent);
+  cursor: default;
+  background-color: var(--color-grey);
+  & a {
+    cursor: default;
+  }
+}

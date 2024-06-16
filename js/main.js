@@ -110,7 +110,7 @@ function modalGoodsInspect(data) {
     let mainImgContainer = document.querySelector('.goods-modal__inspect-main_img'),
         galleryImgContainer = document.querySelector('.goods-modal__inspect-gallery-wrapper'),
         galleryButtons = document.querySelectorAll('.goods-modal__inspect-button');
-    mainImgContainer.src = 'userfiles/' + data['img']
+    mainImgContainer.src = '/userfiles/' + data['img']
     mainImgContainer.alt = data['img'].replace('goods/', '')
 
     if (data['gallery_img']) {
@@ -133,7 +133,7 @@ function modalGoodsInspect(data) {
             if (i === 1) {
                 imgHTML.classList.add('goods-modal__inspect--next_img')
             }
-            imgHTML.src = 'userfiles/' + images[i]
+            imgHTML.src = '/userfiles/' + images[i]
             imgHTML.alt = images[i].replace('goods/', '')
             imgHTML.loading = 'lazy'
             imgHTML.addEventListener('click', onImageClick);
@@ -246,6 +246,7 @@ function returnSwiper() {
 function close(modal) {
     modal.close()
     returnScroll()
+    returnSwiper()
 }
 
 const modals = document.querySelectorAll('.modal-window'),
@@ -271,11 +272,63 @@ if (productPackage) {
 if (closeModalButtons.length) {
     closeModalButtons.forEach(btn => btn.addEventListener('click', (event) => {
         event.stopPropagation()
-        returnScroll()
-        swiper.enable();
         close(btn.closest('dialog'))
     }));
 }
+
+// Catalog
+
+filtersShowUpButtons = document.querySelectorAll('.accordion-label');
+categoryButtons = document.querySelectorAll('.catalog__filter-item-toggle');
+
+if (categoryButtons.length) {
+
+}
+
+if (filtersShowUpButtons.length) {
+    filtersShowUpButtons.forEach(btn => btn.addEventListener('click', (event) => {
+      const contentContainer = event.target.closest('.catalog__filter-item').querySelector('.catalog__filter-item-content')
+        if (contentContainer) {
+            contentContainer.classList.toggle('none');
+        }
+    }))
+}
+
+// Product page
+
+let swiperSub = new Swiper(".subSwiper", {
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+let swiperMain = new Swiper(".mainSwiper", {
+    spaceBetween: 10,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiperSub,
+    },
+});
+
+const docsButtons = document.querySelectorAll('.product-docs__item-button');
+docsButtons.forEach(btn => btn.addEventListener('click', (event) => {
+    const dataAttr = event.target.dataset.docs,
+        container = document.querySelector(`div[data-docs='${dataAttr}']`);
+    if (container) {
+        const sections = document.querySelectorAll('.product-docs__section')
+        sections.forEach(section => section.classList.add('none'))
+        docsButtons.forEach(btn => btn.classList.remove('product-docs__item-button--active'))
+
+        container.classList.remove('none')
+        event.target.classList.add('product-docs__item-button--active')
+    }
+}))
 
 
 
